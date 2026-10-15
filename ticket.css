@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #243b64;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.movie {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 1 1 150px;
+}
+
+form, #bookingList > div {
+    background-color: white;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+input, select {
+    padding: 10px;
+    max-width: 100%;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #243b64;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #4169a1;
+}
+
+#message {
+    font-weight: bold;
+}
+
+#bookingList button {
+    background-color: #c62828;
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 10px;
+    }
+
+    form input, form select {
+        width: 100%;
+    }
+}

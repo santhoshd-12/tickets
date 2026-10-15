@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Movie Ticket Booking</title>
+
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body>
+
+    <h1>Movie Ticket Booking</h1>
+    <p>Choose your movie and book your tickets!</p>
+
+    <h2>Available Movies</h2>
+
+    <div class="movies">
+
+        <div class="movie">
+            <h3>Leo</h3>
+            <p>Ticket Price: ₹150</p>
+        </div>
+
+        <div class="movie">
+            <h3>Jailer</h3>
+            <p>Ticket Price: ₹180</p>
+        </div>
+
+        <div class="movie">
+            <h3>Vikram</h3>
+            <p>Ticket Price: ₹200</p>
+        </div>
+
+    </div>
+
+    <h2>Book Your Tickets</h2>
+
+    <form id="bookingForm">
+
+        <label for="movie">Select Movie:</label>
+
+        <select id="movie" required>
+            <option >Choose a movie</option>
+            <option value="Leo">Leo - ₹150</option>
+            <option value="Jailer">Jailer - ₹180</option>
+            <option value="Vikram">Vikram - ₹200</option>
+        </select>
+
+        <br><br>
+
+        <label for="showtime">Select Showtime:</label>
+
+        <select id="showtime" required>
+            <option>Choose a showtime</option>
+            <option value="10:00 AM">10:00 AM</option>
+            <option value="2:00 PM">2:00 PM</option>
+            <option value="6:00 PM">6:00 PM</option>
+            <option value="9:00 PM">9:00 PM</option>
+        </select>
+
+        <br><br>
+
+        <label for="quantity">Number of Tickets:</label>
+
+        <input type="number" id="quantity"
+               min="1" step="1" required>
+
+        <br><br>
+
+        <label for="email">Email Address:</label>
+
+        <input type="email" id="email" required>
+
+        <br><br>
+
+        <p>Total Price: ₹<span id="total">0</span></p>
+
+        <button type="submit" id="bookButton">
+            Book Tickets
+        </button>
+
+        <button type="reset">Reset Form</button>
+
+    </form>
+
+    <p id="message" role="status"></p>
+
+    <h2>Your Bookings</h2>
+
+    <input type="text" id="search"
+           placeholder="Search by movie or email">
+
+    <p>Total Active Bookings: <span id="bookingCount">0</span></p>
+
+    <div id="bookingList"></div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="ticket.js"></script>
+
+</body>
+</html>
